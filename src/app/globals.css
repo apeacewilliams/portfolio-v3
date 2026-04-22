@@ -1,26 +1,108 @@
 @import "tailwindcss";
 
+/* ── Design tokens ─────────────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: hsl(23, 17%, 9%);
+  --bg-card: hsl(35, 19%, 12%);
+  --bg-hover: hsl(35, 19%, 11%);
+  --bg-tag: hsl(35, 19%, 14%);
+  --fg: hsl(39, 37%, 90%);
+  --fg-muted: hsl(22, 5%, 40%);
+  --fg-subtle: hsl(22, 5%, 50%);
+  --fg-faint: hsl(22, 5%, 35%);
+  --fg-ghost: hsl(22, 5%, 30%);
+  --fg-whisper: hsl(22, 5%, 25%);
+  --fg-dim: hsl(22, 5%, 55%);
+  --border: hsl(24, 5%, 20%);
+  --border-hi: hsl(24, 5%, 64%);
+  --border-lo: hsl(24, 5%, 14%);
+  --amber: hsl(45, 60%, 55%);
+  --rose: hsl(340, 55%, 55%);
+  --sky: hsl(200, 55%, 55%);
+  --sage: hsl(150, 45%, 45%);
+  --violet: hsl(270, 50%, 60%);
 }
 
+/* ── Tailwind theme ────────────────────────────────────── */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg: var(--bg);
+  --color-bg-card: var(--bg-card);
+  --color-bg-hover: var(--bg-hover);
+  --color-bg-tag: var(--bg-tag);
+  --color-fg: var(--fg);
+  --color-fg-muted: var(--fg-muted);
+  --color-fg-subtle: var(--fg-subtle);
+  --color-fg-faint: var(--fg-faint);
+  --color-fg-ghost: var(--fg-ghost);
+  --color-fg-whisper: var(--fg-whisper);
+  --color-fg-dim: var(--fg-dim);
+  --color-border: var(--border);
+  --color-border-hi: var(--border-hi);
+  --color-border-lo: var(--border-lo);
+  --color-amber: var(--amber);
+  --color-rose: var(--rose);
+  --color-sky: var(--sky);
+  --color-sage: var(--sage);
+  --color-violet: var(--violet);
+
+  --font-display: var(--font-fraunces), serif;
+  --font-code: var(--font-dm-mono), monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ── Fluid type scale ──────────────────────────────────── */
+@layer utilities {
+  .text-display {
+    font-size: clamp(64px, 11vw, 148px);
+  }
+  .text-tagline {
+    font-size: clamp(18px, 2.5vw, 28px);
+  }
+  .text-project-name {
+    font-size: clamp(26px, 3.5vw, 46px);
+  }
+  .text-about-lead {
+    font-size: clamp(22px, 2.5vw, 32px);
+  }
+  .text-contact-val {
+    font-size: clamp(20px, 2.5vw, 32px);
+  }
+  .text-exp-role {
+    font-size: clamp(18px, 1.8vw, 24px);
   }
 }
 
+/* ── Base ──────────────────────────────────────────────── */
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  font-size: 15px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--fg);
+  color: var(--bg);
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-hi);
+  border-radius: 9999px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }

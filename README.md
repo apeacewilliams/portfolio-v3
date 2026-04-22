@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Peace Williams-Ojomu — Portfolio
 
-## Getting Started
+Personal portfolio site. Dark editorial aesthetic, privacy-first focus.
 
-First, run the development server:
+## Stack
+
+- [Next.js](https://nextjs.org) 16 (App Router, Turbopack)
+- React 19, TypeScript
+- [Tailwind CSS](https://tailwindcss.com) v4
+- [Framer Motion](https://www.framer.com/motion/)
+- [Biome](https://biomejs.dev) (lint + format)
+
+## Getting started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Updating content
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+All site content lives in `src/lib/data.ts` — edit `PROJECTS`, `SKILLS`, `EXPERIENCE`, and `CONTACT_LINKS` there.
 
-## Learn More
+## Commands
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run dev       # dev server
+npm run build     # production build
+npx biome check   # lint + format check
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deploy
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run build
+```
 
-## Deploy on Vercel
+Deploy the `.next` output to [Vercel](https://vercel.com) or any Node.js host.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT © 2026 Peace Williams-Ojomu — see [LICENSE](./LICENSE).
+
+## Credits
+
+- Design — [Claude Design](https://claude.ai/design) (initial prototype)
+- Fonts — [Fraunces](https://fonts.google.com/specimen/Fraunces) by Undercase Type; [DM Mono](https://fonts.google.com/specimen/DM+Mono) by Colophon Foundry, both via Google Fonts
+- Design inspiration — [freedom.studio](https://freedom.studio)
