@@ -117,5 +117,9 @@ export const CONTACT_LINKS: ContactLink[] = [
     href: "mailto:apeacewilliams@proton.me",
     value: "apeacewilliams@proton.me",
   },
-  { label: "LinkedIn", href: "#", value: "in/peaceawilliams" },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/peacewilliams/",
+    value: "in/peaceawilliams",
+  },
 ];
